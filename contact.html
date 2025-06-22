@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #4b0082;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background-color: #4b0082;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #3a006b;
+    }
+
+    .contact-info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-info-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .contact-info-box span {
+      display: block;
+      font-size: 1.4rem;
+      color: #4b0082;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info-box p {
+      font-size: 1rem;
+      color: #333;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="products.html">Products</a>
+      <a href="todo.html">To-Do</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="contact-form">
+      <h2>Contact Me</h2>
+
+      <form onsubmit="return validateEmail()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" id="emailInput" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required rows="5"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="contact-info-boxes">
+        <div class="contact-info-box">
+          <span>📧 Email</span>
+          <p>talagapulikhitha06@gmail.com</p>
+        </div>
+        <div class="contact-info-box">
+          <span>📍 Location</span>
+          <p>Guntur, Andhra Pradesh</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 My Portfolio</footer>
+
+  <script>
+    function validateEmail() {
+      const email = document.getElementById("emailInput").value;
+      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!pattern.test(email)) {
+        alert("Invalid Email");
+        return false;
+      }
+      alert("Message sent!");
+      return true;
+    }
+  </script>
+</body>
+</html>

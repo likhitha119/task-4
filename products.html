@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="products.html">Products</a>
+      <a href="todo.html">To-Do</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="filter-sort">
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="clothing">Clothing</option>
+        <option value="tech">Tech</option>
+        <option value=""accessories">Accessories</option>
+      </select>
+      <select id="sortPrice">
+        <option value="asc">Price ↑</option>
+        <option value="desc">Price ↓</option>
+      </select>
+    </div>
+
+    <div id="productList" class="product-list"></div>
+  </main>
+
+  <footer>© 2025 My Portfolio</footer>
+  <script src="script.js"></script>
+</body>
+</html>

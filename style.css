@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+header {
+  background: indigo;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+footer {
+  background:indigo;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+
+.projects-section,
+.contact-form,
+.todo-container,
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 100px;
+  animation: fadeIn 1s ease;
+}
+
+
+.bio-box,
+.project-card,
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: cardPop 0.6s ease;
+}
+
+
+.image-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.project-card {
+  width: 300px;
+  min-height: 180px;
+  transition: transform 0.3s ease;
+  background-color: lavender;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  background-color: lightsteelblue;
+}
+
+
+.product-card {
+  width: 220px;
+  min-height: 140px;
+  transition: transform 0.3s ease;
+  background-color: lightyellow;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  background-color: moccasin;
+}
+
+.todo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  flex-direction: column;
+}
+
+.todo-container {
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  animation: fadeIn 1s ease;
+}
+
+.todo-container h2 {
+  color: indigo;
+  margin-bottom: 1rem;
+}
+
+.todo-container input,
+.todo-container button {
+  padding: 0.5rem;
+  margin: 5px 0;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.todo-container li {
+  background: lightgray;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-container button.delete {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.filter-sort {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: indigo;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: indigo;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: darkslateblue;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.projects-wrapper h2 {
+  font-size: 2rem;
+  color: indigo;
+  margin-bottom: 1.5rem;
+}
